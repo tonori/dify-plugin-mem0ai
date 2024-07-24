@@ -1,0 +1,88 @@
+identity: # 工具的基本信息
+  name: add_mem0ai_memory # 工具名称，唯一，不允许和其他工具重名
+  author: tonori # 作者
+  label: # 标签，用于前端展示
+    en_US: Add mem0ai memory # 英文标签
+    zh_Hans: 写入记忆 # 中文标签
+description: # 描述，用于前端展示
+  human: # 用于前端展示的介绍，支持多语言
+    en_US: Add mem0ai memory
+    zh_Hans: 在 mem0ai 中写入记忆
+  llm: Add mem0ai memory. # 传递给 LLM 的介绍，为了使得LLM更好理解这个工具，我们建议在这里写上关于这个工具尽可能详细的信息，让 LLM 能够理解并使用这个工具
+parameters: # 参数列表
+  - name: data # 参数名称
+    required: true # 参数是否必须
+    type: string # 参数类型
+    label: # 参数标签
+      en_US: Memory content # 英文标签
+      zh_Hans: 记忆内容 # 中文标签
+    human_description: # 用于前端展示的介绍，支持多语言
+      en_US: Memory content
+      zh_Hans: 记忆内容
+    llm_description: memory content # 传递给LLM的介绍，同上，为了使得LLM更好理解这个参数，我们建议在这里写上关于这个参数尽可能详细的信息，让LLM能够理解这个参数
+    form: llm # 表单类型，llm表示这个参数需要由Agent自行推理出来，前端将不会展示这个参数
+  - name: user_id
+    type: string # 参数类型
+    label: # 参数标签
+      en_US: User ID # 英文标签
+      zh_Hans: 用户 ID # 中文标签
+    human_description: # 用于前端展示的介绍，支持多语言
+      en_US: User ID
+      zh_Hans: 用户 ID
+    llm_description: User ID # 传递给LLM的介绍，同上，为了使得LLM更好理解这个参数，我们建议在这里写上关于这个参数尽可能详细的信息，让LLM能够理解这个参数
+    form: llm # 表单类型，llm表示这个参数需要由Agent自行推理出来，前端将不会展示这个参数
+  - name: agent_id
+    type: string # 参数类型
+    required: false
+    label: # 参数标签
+      en_US: Agent ID # 英文标签
+      zh_Hans: Agent ID # 中文标签
+    human_description: # 用于前端展示的介绍，支持多语言
+      en_US: Agent ID
+      zh_Hans: Agent ID
+    llm_description: Agent ID # 传递给LLM的介绍，同上，为了使得LLM更好理解这个参数，我们建议在这里写上关于这个参数尽可能详细的信息，让LLM能够理解这个参数
+    form: llm # 表单类型，llm表示这个参数需要由Agent自行推理出来，前端将不会展示这个参数
+  - name: run_id
+    type: string # 参数类型
+    required: false
+    label: # 参数标签
+      en_US: Run ID # 英文标签
+      zh_Hans: Run ID # 中文标签
+    human_description: # 用于前端展示的介绍，支持多语言
+      en_US: Run ID
+      zh_Hans: Run ID
+    llm_description: Run ID # 传递给LLM的介绍，同上，为了使得LLM更好理解这个参数，我们建议在这里写上关于这个参数尽可能详细的信息，让LLM能够理解这个参数
+    form: llm # 表单类型，llm表示这个参数需要由Agent自行推理出来，前端将不会展示这个参数
+  - name: metadata
+    type: string # 参数类型
+    required: false
+    label: # 参数标签
+      en_US: metadata # 英文标签
+      zh_Hans: 元数据 # 中文标签
+    human_description: # 用于前端展示的介绍，支持多语言
+      en_US: metadata
+      zh_Hans: 元数据
+    llm_description: metadata # 传递给LLM的介绍，同上，为了使得LLM更好理解这个参数，我们建议在这里写上关于这个参数尽可能详细的信息，让LLM能够理解这个参数
+    form: llm # 表单类型，llm表示这个参数需要由Agent自行推理出来，前端将不会展示这个参数
+  - name: filters
+    type: string # 参数类型
+    required: false
+    label: # 参数标签
+      en_US: Filters # 英文标签
+      zh_Hans: 过滤条件 # 中文标签
+    human_description: # 用于前端展示的介绍，支持多语言
+      en_US: Filters
+      zh_Hans: 过滤条件
+    llm_description: Filters # 传递给LLM的介绍，同上，为了使得LLM更好理解这个参数，我们建议在这里写上关于这个参数尽可能详细的信息，让LLM能够理解这个参数
+    form: llm # 表单类型，llm表示这个参数需要由Agent自行推理出来，前端将不会展示这个参数
+  - name: prompt
+    type: string # 参数类型
+    required: false
+    label: # 参数标签
+      en_US: Prompt # 英文标签
+      zh_Hans: 提示词 # 中文标签
+    human_description: # 用于前端展示的介绍，支持多语言
+      en_US: Prompt
+      zh_Hans: 提示词
+    llm_description: Prompt # 传递给LLM的介绍，同上，为了使得LLM更好理解这个参数，我们建议在这里写上关于这个参数尽可能详细的信息，让LLM能够理解这个参数
+    form: llm # 表单类型，llm表示这个参数需要由Agent自行推理出来，前端将不会展示这个参数
